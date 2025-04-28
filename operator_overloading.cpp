@@ -3,19 +3,24 @@
 using namespace std;
 
 class Number {
+    private:
+        int num;
+
     public:
-        int value;
-            Number(int v) {
-                value = v;
-            }
-            Number operator+(Number n) {
-                return Number(value + n.value);
-            }
+        Number(int value):num(value) {}
+
+        int getNum() const {
+            return num;
+        }
+
+        Number operator*(const Number &other) const {
+            return Number(num * other.num);
+        }
 };
 
 int main() {
-    Number n1(20), n2(5);
-    Number n3 = n1 + n2;
-    cout << n3.value << endl;
-
+    Number num(10);
+    Number num2(30);
+    Number num3 = num * num2;
+    cout << num3.getNum();
 }
