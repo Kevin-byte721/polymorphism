@@ -12,12 +12,10 @@ class overload {
         return a + 1;
       }
       
-      // Function with two integer parameters
       int add(int a, int b) {
         return a + b;
       }
-      
-      // Function with two double parameters
+    
       double add(double a, double b) {
         return a + b;
       }
